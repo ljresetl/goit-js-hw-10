@@ -5,25 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Таймер зворотного відліку</title>
 
-    <!-- Flatpickr CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-
-    <!-- iziToast CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
-    />
-
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Твій власний CSS -->
+    <!-- Власний CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -59,9 +47,7 @@
       </div>
     </section>
 
-    <!-- Підключаємо бібліотеки та скрипт у кінці body -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <!-- Підключаємо лише свій JS (у ньому імпортуємо flatpickr та iziToast) -->
     <script type="module" src="./js/1-timer.js"></script>
   </body>
 </html>
