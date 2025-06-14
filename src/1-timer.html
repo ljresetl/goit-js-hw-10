@@ -16,34 +16,47 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
     />
+
     <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <p><a href="./index.html">Go back</a></p>
-    <h1>Таймер зворотного відліку</h1>
-    <input type="text" id="datetime-picker" placeholder="Оберіть дату та час" />
-    <button type="button" data-start>Старт</button>
-
-    <div class="timer">
-      <div class="field">
-        <span class="value" data-days>00</span>
-        <span class="label">Дні</span>
+    <section class="timer-section">
+      <p><a href="./index.html">Go back</a></p>
+      <h1 class="timer-h">Таймер зворотного відліку</h1>
+      <div class="div-one">
+        <input
+          type="text"
+          id="datetime-picker"
+          class="datetime-picker-input"
+          placeholder="Оберіть дату та час"
+        />
+        <button class="button-timer" type="button" data-start>Старт</button>
       </div>
-      <div class="field">
-        <span class="value" data-hours>00</span>
-        <span class="label">Години</span>
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">DAYS</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">HOURS</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">MINUTES</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">SECONDS</span>
+        </div>
       </div>
-      <div class="field">
-        <span class="value" data-minutes>00</span>
-        <span class="label">Хвилини</span>
-      </div>
-      <div class="field">
-        <span class="value" data-seconds>00</span>
-        <span class="label">Секунди</span>
-      </div>
-    </div>
-
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
     <script type="module" src="./js/1-timer.js"></script>

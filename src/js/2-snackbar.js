@@ -1,4 +1,27 @@
 const form = document.querySelector('.form');
+const delayInput = form.querySelector('input[name="delay"]');
+const radioGroup = document.querySelector('.radio-group');
+const radios = form.querySelectorAll('input[name="state"]');
+
+// Додаємо клас .selected при фокусі
+delayInput.addEventListener('focus', () => {
+  delayInput.classList.add('selected');
+});
+
+// Видаляємо клас .selected при втраті фокусу
+delayInput.addEventListener('blur', () => {
+  delayInput.classList.remove('selected');
+});
+
+// Додаємо клас .active до radio-group при виборі fulfilled/rejected
+radios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    const selected = form.querySelector('input[name="state"]:checked');
+    if (selected) {
+      radioGroup.classList.add('active');
+    }
+  });
+});
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -34,10 +57,12 @@ form.addEventListener('submit', event => {
       console.log(`❌ Rejected promise in ${delay}ms`);
     })
     .finally(() => {
-      form.delay.value = '';  // Очистка інпуту затримки
+      form.delay.value = ''; // Очистка інпуту затримки
 
       // Скидання вибору радіокнопок
-      const radios = form.querySelectorAll('input[name="state"]');
       radios.forEach(radio => radio.checked = false);
+
+      // Видалення активного класу для radio-group
+      radioGroup.classList.remove('active');
     });
 });
