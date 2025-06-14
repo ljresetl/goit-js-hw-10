@@ -1,3 +1,7 @@
+// Імпортуємо iziToast і його стилі (npm)
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 const form = document.querySelector('.form');
 const delayInput = form.querySelector('input[name="delay"]');
 const radioGroup = document.querySelector('.radio-group');
